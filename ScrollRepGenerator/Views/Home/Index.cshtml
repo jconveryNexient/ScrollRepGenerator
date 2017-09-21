@@ -1,0 +1,219 @@
+﻿@model ScrollRepGenerator.Models.ScrollCase
+
+@using (Html.BeginForm("PrettyScrolls", "Home", FormMethod.Post))
+{
+    <table name="scrollTable" class="table">
+        <thead> 
+            <h1>Select # of Scrolls to Create Reps</h1>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <table name="firstLevel" style="width:100%">
+                        <thead>
+                            <h3>First Level</h3>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.First.Count(); i++)
+                            {
+                                <tr>
+                                    <td style="width:75%">
+                                        @Model.First[i].Name
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(_ => _.First[i].Number, new { type = "number", style = "width:35px;" })
+                                        @Html.HiddenFor(_ => _.First[i].Incant)
+                                        @Html.HiddenFor(_ => _.First[i].Type)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table name="secondLevel" style="width:100%">
+                        <thead>
+                            <h3>Second Level</h3>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Second.Count(); i++)
+                            {
+                                <tr>
+                                    <td style="width:75%">
+                                        @Model.Second[i].Name
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(_ => _.Second[i].Number, new { type = "number", style = "width:35px;" })
+                                        @Html.HiddenFor(_ => _.Second[i].Incant)
+                                        @Html.HiddenFor(_ => _.Second[i].Type)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table name="thirdLevel" style="width:100%">
+                        <thead>
+                            <h3>Third Level</h3>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Third.Count(); i++)
+                            {
+                                <tr>
+                                    <td style="width:75%">
+                                        @Model.Third[i].Name
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(_ => _.Third[i].Number, new { type = "number", style = "width:35px;" })
+                                        @Html.HiddenFor(_ => _.Third[i].Incant)
+                                        @Html.HiddenFor(_ => _.Third[i].Type)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table name="fourthLevel" style="width:100%">
+                        <thead>
+                            <h3>Fourth Level</h3>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Fourth.Count(); i++)
+                            {
+                                <tr>
+                                    <td style="width:75%">
+                                        @Model.Fourth[i].Name
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(_ => _.Fourth[i].Number, new { type = "number", style = "width:35px;" })
+                                        @Html.HiddenFor(_ => _.Fourth[i].Incant)
+                                        @Html.HiddenFor(_ => _.Fourth[i].Type)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table name="fifthLevel" style="width:100%">
+                        <thead>
+                            <h3>Fifth Level</h3>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Fifth.Count(); i++)
+                            {
+                                <tr>
+                                    <td style="width:75%">
+                                        @Model.Fifth[i].Name
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(_ => _.Fifth[i].Number, new { type = "number", style = "width:35px;" })
+                                        @Html.HiddenFor(_ => _.Fifth[i].Incant)
+                                        @Html.HiddenFor(_ => _.Fifth[i].Type)
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table name="sixthLevel" style="width:100%">
+                        <thead>
+                            <h3>Sixth Level</h3>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Sixth.Count(); i++)
+                            {
+                                <tr>
+                                    <td style="width:75%">
+                                        @Model.Sixth[i].Name
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(_ => _.Sixth[i].Number, new { type = "number", style = "width:35px;" })
+                                        @Html.HiddenFor(_ => _.Sixth[i].Incant)
+                                        @Html.HiddenFor(_ => _.Sixth[i].Type)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table name="seventhLevel" style="width:100%">
+                        <thead>
+                            <h3>Seventh Level</h3>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Seventh.Count(); i++)
+                            {
+                                <tr>
+                                    <td style="width:75%">
+                                        @Model.Seventh[i].Name
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(_ => _.Seventh[i].Number, new { type = "number", style = "width:35px;" })
+                                        @Html.HiddenFor(_ => _.Seventh[i].Incant)
+                                        @Html.HiddenFor(_ => _.Seventh[i].Type)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table name="eigthLevel" style="width:100%">
+                        <thead>
+                            <h3>Eigth Level</h3>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Eigth.Count(); i++)
+                            {
+                                <tr>
+                                    <td style="width:75%">
+                                        @Model.Eigth[i].Name
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(_ => _.Eigth[i].Number, new { type = "number", style = "width:35px;" })
+                                        @Html.HiddenFor(_ => _.Eigth[i].Incant)
+                                        @Html.HiddenFor(_ => _.Eigth[i].Type)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table name="ninthLevel" style="width:100%">
+                        <thead>
+                            <h3>Ninth Level</h3>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Ninth.Count(); i++)
+                            {
+                                <tr>
+                                    <td style="width:75%">
+                                        @Model.Ninth[i].Name
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(_ => _.Ninth[i].Number, new { type = "number", style = "width:35px;" })
+                                        @Html.HiddenFor(_ => _.Ninth[i].Incant)
+                                        @Html.HiddenFor(_ => _.Ninth[i].Type)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="submit" id="btnCreate">Create PDF</button>
+}
