@@ -247,7 +247,7 @@ namespace ScrollRepGenerator.Models
             {
                 Name = "Stun Limb",
                 Level = 8,
-                Incant = "a Stun your <limb>",
+                Incant = "Stun your <limb>",
                 Type = SpellType.EForce
             });
             Eigth.Add(new Scroll(8, SpellFlavor.Stone));
