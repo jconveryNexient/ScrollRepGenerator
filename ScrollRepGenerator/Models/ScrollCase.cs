@@ -23,8 +23,8 @@ namespace ScrollRepGenerator.Models
             {
                 Name = "Disarm",
                 Level = 1,
-                Incant = "Disarm your (item)",
-                Type = SpellType.SForce
+                Incant = "Disarm your <target>",
+                Type = SpellType.EForce
             });
             First.Add(new Scroll
             {
@@ -35,31 +35,28 @@ namespace ScrollRepGenerator.Models
             });
             First.Add(new Scroll
             {
-                Name = "Stone bolt",
-                Level = 1,
-                Incant = "a Stone Bolt",
-                Type = SpellType.Evocation
+                Name = "Lesser Investment",
+                Level = 3,
+                Incant = "build a Lesser Investment",
+                Type = SpellType.EForce
             });
             First.Add(new Scroll
             {
                 Name = "Fortress",
                 Level = 1,
                 Incant = "build a Fortress",
-                Type = SpellType.SForce
+                Type = SpellType.EForce
             });
+            First.Add(new Scroll(1, SpellFlavor.Stone));
+            First.Add(new Scroll(1, SpellFlavor.Lighting));
+            First.Add(new Scroll(1, SpellFlavor.Ice));
+            First.Add(new Scroll(1, SpellFlavor.Flame));
             Second.Add(new Scroll
             {
-                Name = "Lightning Bolt",
+                Name = "Weapon Shield",
                 Level = 2,
-                Incant = "a Lightning Bolt",
-                Type = SpellType.Evocation
-            });
-            Second.Add(new Scroll
-            {
-                Name = "Magic Armor",
-                Level = 2,
-                Incant = "of a Magic Armor",
-                Type = SpellType.Protective
+                Incant = "a Weapon Shield",
+                Type = SpellType.Protection
             });
             Second.Add(new Scroll
             {
@@ -77,11 +74,22 @@ namespace ScrollRepGenerator.Models
             });
             Second.Add(new Scroll
             {
-                Name = "Shield",
+                Name = "Slow",
                 Level = 2,
-                Incant = "of a Shield",
-                Type = SpellType.Protective
+                Incant = "Slow you",
+                Type = SpellType.Binding
             });
+            Second.Add(new Scroll
+            {
+                Name = "Mend Armor",
+                Level = 2,
+                Incant = "Mend 10 Armor",
+                Type = SpellType.EForce
+            });
+            Second.Add(new Scroll(2, SpellFlavor.Stone));
+            Second.Add(new Scroll(2, SpellFlavor.Lighting));
+            Second.Add(new Scroll(2, SpellFlavor.Ice));
+            Second.Add(new Scroll(2, SpellFlavor.Flame));
             Third.Add(new Scroll
             {
                 Name = "Bind",
@@ -91,38 +99,35 @@ namespace ScrollRepGenerator.Models
             });
             Third.Add(new Scroll
             {
-                Name = "Ice Bolt",
-                Level = 3,
-                Incant = "an Ice Bolt",
-                Type = SpellType.Evocation
-            });
-            Third.Add(new Scroll
-            {
-                Name = "Lesser Investment",
-                Level = 3,
-                Incant = "build a Lesser Investment",
-                Type = SpellType.EForce
-            });
-            Third.Add(new Scroll
-            {
                 Name = "Shatter",
                 Level = 3,
-                Incant = "Shatter <item>",
-                Type = SpellType.SForce
+                Incant = "Shatter your <target>",
+                Type = SpellType.EForce
             });
             Third.Add(new Scroll
             {
                 Name = "Wall of Force",
                 Level = 3,
-                Incant = "build a Wall",
+                Incant = "build a Wall of Force",
                 Type = SpellType.EForce
             });
+            Third.Add(new Scroll
+            {
+                Name = "Solidfy",
+                Level = 3,
+                Incant = "Solidfy you",
+                Type = SpellType.EForce
+            });
+            Third.Add(new Scroll(3, SpellFlavor.Stone));
+            Third.Add(new Scroll(3, SpellFlavor.Lighting));
+            Third.Add(new Scroll(3, SpellFlavor.Ice));
+            Third.Add(new Scroll(3, SpellFlavor.Flame));
             Fourth.Add(new Scroll
             {
                 Name = "Awaken",
                 Level = 4,
-                Incant = "Awaken",
-                Type = SpellType.Command
+                Incant = "I Awaken you from commands",
+                Type = SpellType.Fixing
             });
             Fourth.Add(new Scroll
             {
@@ -133,94 +138,85 @@ namespace ScrollRepGenerator.Models
             });
             Fourth.Add(new Scroll
             {
-                Name = "Elemental Blade",
+                Name = "Enhanced Blade",
                 Level = 4,
-                Incant = "an Elemental Blade",
-                Type = SpellType.Protective
-            });
-            Fourth.Add(new Scroll
-            {
-                Name = "Flame Bolt",
-                Level = 4,
-                Incant = "a Flame Bolt",
-                Type = SpellType.Evocation
+                Incant = "an Enhanced Blade",
+                Type = SpellType.Protection
             });
             Fourth.Add(new Scroll
             {
                 Name = "Shun",
                 Level = 4,
                 Incant = "Shun me",
-                Type = SpellType.Command
+                Type = SpellType.Commands
             });
+            Fourth.Add(new Scroll(4, SpellFlavor.Stone));
+            Fourth.Add(new Scroll(4, SpellFlavor.Lighting));
+            Fourth.Add(new Scroll(4, SpellFlavor.Ice));
+            Fourth.Add(new Scroll(4, SpellFlavor.Flame));
             Fifth.Add(new Scroll
             {
                 Name = "Release",
                 Level = 5,
-                Incant = "Release you",
-                Type = SpellType.Binding
+                Incant = "I Release you from binding",
+                Type = SpellType.Fixing
             });
             Fifth.Add(new Scroll
             {
                 Name = "Spell Shield",
                 Level = 5,
-                Incant = "of a Spell Shield",
-                Type = SpellType.Protective
+                Incant = "a Spell Shield",
+                Type = SpellType.Protection
             });
             Fifth.Add(new Scroll
             {
-                Name = "Stone Storm",
+                Name = "Subjugate",
                 Level = 5,
-                Incant = "a Stone Storm",
+                Incant = "Subjugate you",
+                Type = SpellType.EForce
+            });
+            Fifth.Add(new Scroll
+            {
+                Name = "Lesser Magic Storm",
+                Level = 5,
+                Incant = "Lesser Magic Storm",
                 Type = SpellType.Evocation
             });
-            Fifth.Add(new Scroll
-            {
-                Name = "Web",
-                Level = 5,
-                Incant = "Web you",
-                Type = SpellType.Binding
-            });
+            Fifth.Add(new Scroll(5, SpellFlavor.Stone));
+            Fifth.Add(new Scroll(5, SpellFlavor.Lighting));
+            Fifth.Add(new Scroll(5, SpellFlavor.Ice));
+            Fifth.Add(new Scroll(5, SpellFlavor.Flame));
             Sixth.Add(new Scroll
             {
                 Name = "Elemental Shield",
                 Level = 6,
-                Incant = "of an Elemental Shield",
-                Type = SpellType.Protective
-            });
-            Sixth.Add(new Scroll
-            {
-                Name = "Enflame",
-                Level = 6,
-                Incant = "Enflame <item>",
-                Type = SpellType.SForce
-            });
-            Sixth.Add(new Scroll
-            {
-                Name = "Lightning Storm",
-                Level = 6,
-                Incant = "a Lightning Storm",
-                Type = SpellType.Evocation
-            });
-            Sixth.Add(new Scroll
-            {
-                Name = "Magic Blade",
-                Level = 6,
-                Incant = "of a Magic Blade",
-                Type = SpellType.Protective
+                Incant = "an Elemental Shield",
+                Type = SpellType.Protection
             });
             Sixth.Add(new Scroll
             {
                 Name = "Sleep",
                 Level = 6,
                 Incant = "Sleep",
-                Type = SpellType.Command
+                Type = SpellType.Commands
             });
+            Sixth.Add(new Scroll
+            {
+                Name = "Wizard Lock",
+                Level = 6,
+                Incant = "build a Wizard Lock",
+                Type = SpellType.EForce
+            });
+            Sixth.Add(new Scroll(6, SpellFlavor.Stone));
+            Sixth.Add(new Scroll(6, SpellFlavor.Lighting));
+            Sixth.Add(new Scroll(6, SpellFlavor.Ice));
+            Sixth.Add(new Scroll(6, SpellFlavor.Flame));
             Seventh.Add(new Scroll
             {
                 Name = "Charm",
                 Level = 7,
                 Incant = "be Charmed",
-                Type = SpellType.Command
+                Type = SpellType.Commands
             });
             Seventh.Add(new Scroll
             {
@@ -229,62 +225,35 @@ namespace ScrollRepGenerator.Models
                 Incant = "Confine you",
                 Type = SpellType.Binding
             });
-            Seventh.Add(new Scroll
-            {
-                Name = "Destroy",
-                Level = 7,
-                Incant = "Destroy <item>",
-                Type = SpellType.SForce
-            });
-            Seventh.Add(new Scroll
-            {
-                Name = "Ice Storm",
-                Level = 7,
-                Incant = "an Ice Storm",
-                Type = SpellType.Evocation
-            });
-            Seventh.Add(new Scroll
-            {
-                Name = "Subjugate",
-                Level = 7,
-                Incant = "Subjugate you",
-                Type = SpellType.EForce
-            });
+            Seventh.Add(new Scroll(7, SpellFlavor.Stone));
+            Seventh.Add(new Scroll(7, SpellFlavor.Lighting));
+            Seventh.Add(new Scroll(7, SpellFlavor.Ice));
+            Seventh.Add(new Scroll(7, SpellFlavor.Flame));
             Eigth.Add(new Scroll
             {
                 Name = "Dispel",
                 Level = 8,
                 Incant = "to Dispel",
-                Type = SpellType.Protective
-            });
-            Eigth.Add(new Scroll
-            {
-                Name = "Dragon's Breath",
-                Level = 8,
-                Incant = "a Dragon's Breath",
-                Type = SpellType.Evocation
+                Type = SpellType.Protection
             });
             Eigth.Add(new Scroll
             {
                 Name = "Reflect Magic",
                 Level = 8,
-                Incant = "of a Reflect Magic",
-                Type = SpellType.Protective
+                Incant = "a Reflect Magic",
+                Type = SpellType.Protection
             });
             Eigth.Add(new Scroll
             {
-                Name = "Solidfy",
+                Name = "Stun Limb",
                 Level = 8,
-                Incant = "Solidfy you",
+                Incant = "a Stun your <limb>",
                 Type = SpellType.EForce
             });
-            Eigth.Add(new Scroll
-            {
-                Name = "Wizard Lock",
-                Level = 8,
-                Incant = "build a Wizard Lock",
-                Type = SpellType.EForce
-            });
+            Eigth.Add(new Scroll(8, SpellFlavor.Stone));
+            Eigth.Add(new Scroll(8, SpellFlavor.Lighting));
+            Eigth.Add(new Scroll(8, SpellFlavor.Ice));
+            Eigth.Add(new Scroll(8, SpellFlavor.Flame));
             Ninth.Add(new Scroll
             {
                 Name = "Circle of Power",
@@ -294,37 +263,9 @@ namespace ScrollRepGenerator.Models
             });
             Ninth.Add(new Scroll
             {
-                Name = "Stone Blast",
-                Level = 9,
-                Incant = "a Stone Blast",
-                Type = SpellType.Evocation
-            });
-            Ninth.Add(new Scroll
-            {
-                Name = "Lightning Blast",
-                Level = 9,
-                Incant = "a Lightning Blast",
-                Type = SpellType.Evocation
-            });
-            Ninth.Add(new Scroll
-            {
-                Name = "Ice Blast",
-                Level = 9,
-                Incant = "an Ice Blast",
-                Type = SpellType.Evocation
-            });
-            Ninth.Add(new Scroll
-            {
-                Name = "Flame Blast",
-                Level = 9,
-                Incant = "a Flame Blast",
-                Type = SpellType.Evocation
-            });
-            Ninth.Add(new Scroll
-            {
                 Name = "Magic Storm",
                 Level = 9,
-                Incant = "a Magic Storm",
+                Incant = "Magic Storm",
                 Type = SpellType.Evocation
             });
             Ninth.Add(new Scroll
@@ -341,6 +282,10 @@ namespace ScrollRepGenerator.Models
                 Incant = "build a Ward",
                 Type = SpellType.EForce
             });
+            Ninth.Add(new Scroll(9, SpellFlavor.Stone));
+            Ninth.Add(new Scroll(9, SpellFlavor.Lighting));
+            Ninth.Add(new Scroll(9, SpellFlavor.Ice));
+            Ninth.Add(new Scroll(9, SpellFlavor.Flame));
         }
 
         public List<Scroll> ConvertToList()
